@@ -13,6 +13,7 @@ function Header() {
                 <li className='header__li'>Mercado Livre</li>
                 <li className='header__li'>Desperdiçômetro</li>
                 <li className='header__li'>Blog</li>
+                <li className='header__li_pesquisa'>Faça sua pesquisa</li>
             </ul>
             <button className='header__button'>Seja nosso cliente</button>
         </div>

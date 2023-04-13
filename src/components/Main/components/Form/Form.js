@@ -26,8 +26,6 @@ function Form() {
         e.preventDefault();     
 
         if (!inputValue) return    
-            
-        
 
         loadSuppliers();       
     }
@@ -37,7 +35,7 @@ function Form() {
     return (
       <div className='form'> 
         <form className='form__consult' onSubmit={handleSubmit}>
-            <label>Qual o seu consumo mensal de energia (Kwh)?</label>
+            <h2>Qual o seu consumo mensal de energia (kwh)?</h2>
             <input 
             type='number' 
             placeholder='Ex.: 3000'
@@ -57,11 +55,28 @@ function Form() {
                 return (
                     <span className= 'container'key={supplier.id}>
                     <img className='form__img' src={supplier.logo} alt={`logo da empresa ${supplier.nome}`}/>
-                    <h5>{supplier.nome}</h5>
+                    <strong>Empresa:</strong>
+                    <span>{supplier.nome}</span>
+
+                    <strong>Estado:</strong>
+                    <span>{supplier.uf}</span>
+
+                    <strong>Custo por kwh:</strong>
+                    <span>{supplier.custo_kwh}</span>
+
+                    <strong>Limite mínimo kwh:</strong>
+                    <span>{supplier.limite_min_kwh}</span>
+
+                    <strong>Total de clientes:</strong>
+                    <span>{supplier.total_clientes}</span>
+
+                    <strong>Avaliação media dos clientes:</strong>
+                    <span>{supplier.avaliacao_media_clientes}</span>
                     </span>
+                                  
+
                 )
             }
-                
             )
         }
             </div>  

@@ -1,5 +1,5 @@
 .header {
-height:80px ;
+height: 80px;
 padding: 0 80px;
 font-weight: bold;
 }
@@ -14,12 +14,14 @@ font-weight: bold;
 
 .header__img{
     height: 50px;
-    width: auto;    
+    width: auto; 
+    margin-right: 20px;   
 }
 
 .header__ul{
-    width: 50%;
-    margin-right: 200px;
+    width: 80%;
+    margin-right: 100px;
+    gap: 10px;
     list-style-type: none;    
     display: flex;
     justify-content: space-between;
@@ -33,10 +35,19 @@ font-weight: bold;
     color:rgb(0,223,124);
 }
 
+.header__li_pesquisa{
+    color:rgb(0,223,124);
+    cursor: pointer;  
+}
+
+.header__li_pesquisa:hover{
+    color: black;
+}
+
 .header__button{
     all:unset;
     box-sizing: border-box;
-    width: 200px;
+    width: 300px;
     height: 35px;
     font-size: 18px;
     margin-right: 20px;
