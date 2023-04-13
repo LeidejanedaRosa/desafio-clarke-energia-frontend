@@ -1,60 +1,69 @@
 import './Form.css';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import api from '../../../../services/api';
 
 function Form() {
     const [suppliers, setSuppliers] = useState([]);
-    const [form, setForm] = useState();
+    const [inputValue, setInputValue] = useState();
    
     async function loadSuppliers (){
         try {
-            const response = await api.get (`/fornecedores/${form}`);
-            
+            const response = await api.get(`/fornecedores/${inputValue}`);
+           
             setSuppliers(response.data);
 
         } catch (error) {
            console.log(error);
         }
     }
+
     function handleChangeInputValue (e){
-        setForm(e.target.value)
-        console.log(suppliers);
+        if(e.target.value > 0)
+        setInputValue(e.target.value)          
     }
 
     function handleSubmit (e){
         e.preventDefault();     
-       
-        console.log('Submit');
-        console.log(form);
+
+        if (!inputValue) return    
+            
+        
+
+        loadSuppliers();       
     }
    
-    useEffect(() => {
-        loadSuppliers();
-    },[]);
+    
 
     return (
       <div className='form'> 
         <form className='form__consult' onSubmit={handleSubmit}>
-            <label>Qual o seu consumo mensal de energia?</label>
+            <label>Qual o seu consumo mensal de energia (Kwh)?</label>
             <input 
-            // name='name'
             type='number' 
-            placeholder='Informe aqui'
-            value={form}
+            placeholder='Ex.: 3000'
+            value={inputValue}
             onChange={handleChangeInputValue}
             />
-           <button
+           <button           
            onClick={()=>loadSuppliers()}
+           type ='submit'
            >Pesquisar fornecedores</button>
         </form>  
         
         <div className='form__result'>
             <div className='form__result__return'> 
-            {/* ternário (se form.length = 0 - Não foi encontrado nenhum fornecedor)    */}
-            <h5>Foram encontrados {suppliers.length} registros</h5>   
-            {suppliers.map((supplier) =>(
-                <h3 key={suppliers.id}>{suppliers}</h3>
-            ))}  
+            <h3>Foram encontrados {suppliers.length} registros</h3>   
+            {suppliers?.map((supplier) =>{
+                return (
+                    <span className= 'container'key={supplier.id}>
+                    <img className='form__img' src={supplier.logo} alt={`logo da empresa ${supplier.nome}`}/>
+                    <h5>{supplier.nome}</h5>
+                    </span>
+                )
+            }
+                
+            )
+        }
             </div>  
         </div>
       </div>    
