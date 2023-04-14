@@ -6,7 +6,7 @@ function Table ({suppliers}) {
 
     return(
     <div className='table'>               
-        <h3>Foram encontrados {suppliers.length} registros</h3>  
+       
             <div className='table__header'>
                 <strong className='table__logo'>Logo da empresa</strong>
                 <strong className='table__empresa'>Empresa</strong>
