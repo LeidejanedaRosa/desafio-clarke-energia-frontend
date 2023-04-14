@@ -2,16 +2,19 @@
 height: 90vh ;
 width: 100vw;
 display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
 }
 
-.form__consult, .form__result{
-  height: 100%;
-  width: 50%;
+.form__consult {
+    height: 100%;
+    width: 50%;
    
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .form__consult h2{
@@ -19,31 +22,17 @@ display: flex;
     font-size: 32px;
 }
 
-.form__result{
-    float: left;  
-}
-.form__result__return{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 10px;
-    width: 600px;
-    height: 600px;
-    overflow-y: auto;
-    padding: 30px;
-    background-color: white;
-    border-radius: 10px;
-}
-
-.form__result{    
-    float: right;
-}
-
 .form__consult input{
     margin: 16px 0;
     padding: 10px;
     height: 40px;
     width: 250px;
+}
+
+.form__consult button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
 }
 
 .form__consult button{
@@ -64,21 +53,3 @@ display: flex;
     justify-content: center;
 }
 
-.form__consult button:active {
-    background-color: #3e8e41;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
-  }
-
-.form__img{
-    width:auto;
-    height: 100px;
-}
- .container{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 10px;
-    border-bottom: 1px solid grey;
-    
- }

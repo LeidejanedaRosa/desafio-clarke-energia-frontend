@@ -1,20 +1,19 @@
 import './Form.css';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import api from '../../../../services/api';
+import Table from '../Table/Table'
 
 function Form() {
     const [suppliers, setSuppliers] = useState([]);
     const [inputValue, setInputValue] = useState();
-   
+    const [showTable, setShowTable] = useState(false); 
+      
     async function loadSuppliers (){
-        try {
-            const response = await api.get(`/fornecedores/${inputValue}`);
+        
+        const response = await api.get(`/fornecedores/${inputValue}`);
            
-            setSuppliers(response.data);
-
-        } catch (error) {
-           console.log(error);
-        }
+        setSuppliers(response.data);
+        setShowTable(true);
     }
 
     function handleChangeInputValue (e){
@@ -26,11 +25,9 @@ function Form() {
         e.preventDefault();     
 
         if (!inputValue) return    
-
+            
         loadSuppliers();       
-    }
-   
-    
+    }    
 
     return (
       <div className='form'> 
@@ -48,40 +45,10 @@ function Form() {
            >Pesquisar fornecedores</button>
         </form>  
         
-        <div className='form__result'>
-            <div className='form__result__return'> 
-            <h3>Foram encontrados {suppliers.length} registros</h3>   
-            {suppliers?.map((supplier) =>{
-                return (
-                    <span className= 'container'key={supplier.id}>
-                    <img className='form__img' src={supplier.logo} alt={`logo da empresa ${supplier.nome}`}/>
-                    <strong>Empresa:</strong>
-                    <span>{supplier.nome}</span>
-
-                    <strong>Estado:</strong>
-                    <span>{supplier.uf}</span>
-
-                    <strong>Custo por kwh:</strong>
-                    <span>{supplier.custo_kwh}</span>
-
-                    <strong>Limite mínimo kwh:</strong>
-                    <span>{supplier.limite_min_kwh}</span>
-
-                    <strong>Total de clientes:</strong>
-                    <span>{supplier.total_clientes}</span>
-
-                    <strong>Avaliação media dos clientes:</strong>
-                    <span>{supplier.avaliacao_media_clientes}</span>
-                    </span>
-                                  
-
-                )
-            }
-            )
-        }
-            </div>  
+        {showTable && <Table suppliers={suppliers}/>}
+        
         </div>
-      </div>    
+ 
     );
   }
   
