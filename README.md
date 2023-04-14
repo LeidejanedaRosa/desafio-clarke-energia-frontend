@@ -1,6 +1,6 @@
 # Desafio Clarke Energia - Consumo de energia mensal
 
-<<<<<<< HEAD
+
 Aplicação para um serviço de mercado livre de energia sustentável, onde você pode encontrar um fornecedor que atende a sua demanda mensal de consumo.
 
 | Vitrine.Dev         |                                                                       |
@@ -24,7 +24,7 @@ A aplicação foi desenvolvida utilizando as seguintes tecnologias:
 - Axios
 - React
 
-### Como rodar
+### Como rodar o projeto localmente
 
 1.  Verifique se o `express` e o `npm` estão instalados
 2.  Instale as dependências do projeto com: `npm i`
