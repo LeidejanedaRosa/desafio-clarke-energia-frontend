@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+# Desafio Clarke Energia - Consumo de energia mensal
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+Aplicação para um serviço de mercado livre de energia sustentável, onde vocÊ pode encontrar um fornecedor que atende a sua demanda mensal de consumo.
 
-In the project directory, you can run:
+| Vitrine.Dev          |     |
+| -------------------  | --- |
+| :sparkles: Nome      | **Aplicação para um serviço de mercado livre de energia sustentável**
+| :label: Tecnologias  | JavaScript, CSS, HTML, Node.js, Express
+| :rocket: Deploy      | https://desafio-clarke-energia-frontend.vercel.app/
+| :rocket: URL         | https://desafio-clarke-energia-backend-3ueh.vercel.app/
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Detalhes do projeto
 
-### `npm test`
+Este projeto contém uma amostra de um aplicativo que roda em express e javascript com uma instância axios.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+A aplicação foi desenvolvida utilizando as seguintes tecnologias:
 
-### `npm run build`
+- HTML
+- CSS
+- JavaScript
+- Node.js
+- Express
+- Axios
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Como rodar
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1.  Verifique se o `express` e o `npm` estão instalados
+2.  Instale as dependências do projeto com: `npm i`
+3.  Rode o projeto com: `npm start`
+4.  Acesse o projeto utilizando `localhost:4000`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Neste ponto, você deve conseguir acessar a API usando o seu navegador
 
-### `npm run eject`
+#### Considerações finais
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Este projeto foi desenvolvido como parte do processo seletivo proposto pela Clarke Energia. Se você tiver alguma dúvida ou sugestão, por favor, não hesite em entrar em contato através do email leidejanedarosa.81@gmail.com
