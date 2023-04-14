@@ -32,7 +32,7 @@ function Form() {
     return (
       <div className='form'> 
         <form className='form__consult' onSubmit={handleSubmit}>
-            <h2>Qual o seu consumo mensal de energia (kwh)?</h2>
+            <h2>Qual o seu consumo mensal de energia (kWh)?</h2>
             <input 
             type='number' 
             placeholder='Ex.: 3000'
